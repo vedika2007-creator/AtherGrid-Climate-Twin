@@ -1,31 +1,409 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center;
-    background-color: #f4f7fa;
+/* ==============================
+   GOOGLE FONT
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==============================
+   GLOBAL
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-header {
-    background-color: #0b5ed7;
-    color: white;
-    padding: 30px;
+html{
+    scroll-behavior:smooth;
 }
 
-main {
-    padding: 40px;
+body{
+    background:#07111f;
+    color:white;
+    line-height:1.6;
 }
 
-section {
-    padding: 30px;
+/* ==============================
+   NAVBAR
+============================== */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0b1625;
+    position:sticky;
+    top:0;
 }
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#00d4ff;
 }
 
-footer {
-    margin-top: 30px;
-    padding: 15px;
-    text-align: center;
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:#00d4ff;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    color:#00d4ff;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#d5d5d5;
+
+    margin-bottom:35px;
+
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.primary-btn{
+
+    background:#00d4ff;
+
+    color:black;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.secondary-btn{
+
+    border:2px solid #00d4ff;
+
+    color:#00d4ff;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#00d4ff;
+
+    color:black;
+
+}
+
+/* ==============================
+   STATS
+============================== */
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:60px 8%;
+
+}
+
+.stat-card{
+
+    background:#11253d;
+
+    padding:35px;
+
+    width:220px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px rgba(0,212,255,.4);
+
+}
+
+.stat-card h2{
+
+    font-size:40px;
+
+    color:#00d4ff;
+
+}
+
+.stat-card p{
+
+    margin-top:10px;
+
+}
+
+/* ==============================
+   FEATURES
+============================== */
+
+.features{
+
+    padding:80px 8%;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:50px;
+
+}
+
+.feature-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#11253d;
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 20px rgba(0,212,255,.5);
+
+}
+
+.card h3{
+
+    color:#00d4ff;
+
+    margin-bottom:15px;
+
+}
+
+/* ==============================
+   ABOUT
+============================== */
+
+.about{
+
+    padding:80px 10%;
+
+    text-align:center;
+
+}
+
+.about h2{
+
+    color:#00d4ff;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    font-size:20px;
+
+}
+
+/* ==============================
+   TEAM
+============================== */
+
+.team{
+
+    text-align:center;
+
+    padding:80px 10%;
+
+}
+
+.team h2{
+
+    font-size:42px;
+
+    color:#00d4ff;
+
+    margin-bottom:20px;
+
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer{
+
+    background:#0b1625;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+footer h2{
+
+    color:#00d4ff;
+
+    margin-bottom:10px;
+
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:20px;
+
+}
+
+nav ul li{
+
+margin:10px;
+
+}
+
 }
