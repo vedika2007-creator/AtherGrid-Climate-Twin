@@ -1,3 +1,4 @@
-document.querySelector("button").addEventListener("click", () => {
-    alert("Dashboard coming soon!");
+
+    document.querySelector("button").addEventListener("click", function () {
+    window.location.href = "dashboard.html";
 });
