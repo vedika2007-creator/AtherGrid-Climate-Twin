@@ -1,31 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtherGrid Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
+
 <body>
 
-<h1>Climate Dashboard</h1>
+    <!-- Top Navigation -->
 
-<div>
-    <h3>🌡️ Temperature</h3>
-    <p>32°C</p>
-</div>
+    <header class="dashboard-header">
 
-<div>
-    <h3>🌧️ Rainfall</h3>
-    <p>120 mm</p>
-</div>
+        <h1>AtherGrid Mission Control</h1>
 
-<div>
-    <h3>💧 Humidity</h3>
-    <p>68%</p>
-</div>
+        <nav>
 
-<h2>🗺️ India Map (Coming Soon)</h2>
+            <a href="index.html">Home</a>
 
-<h2>🤖 AI Predictions (Coming Soon)</h2>
+            <a href="#">Climate</a>
+
+            <a href="#">AI Prediction</a>
+
+            <a href="#">Alerts</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Dashboard -->
+
+    <main class="dashboard">
+
+        <!-- Left Panel -->
+
+        <section class="left-panel">
+
+            <h2>India Climate Overview</h2>
+            <div class="location-box">
+        <h3>📍 Selected Location</h3>
+        <p id="location-name">Click anywhere on the map</p>
+    </div>
+
+            <div id="map" class="map-box"></div>
+
+        </section>
+
+        <!-- Right Panel -->
+
+        <section class="right-panel">
+
+            <div class="dashboard-card">
+
+                <h3>Temperature</h3>
+
+                <p id="temperature">32°C</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Rainfall</h3>
+
+                <p id="rainfall">180 mm</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Humidity</h3>
+
+                <p id="humidity">72%</p>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Risk Level</h3>
+
+                <p id="risk">Medium</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- AI Section -->
+
+    <section class="ai-section">
+
+        <h2>AI Climate Prediction</h2>
+
+        <p>
+
+            AI Engine Status :
+            Ready
+
+        </p>
+
+        <button>
+
+            Generate Prediction
+
+        </button>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        Team AtherGrid
+
+    </footer>
+
+   
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
